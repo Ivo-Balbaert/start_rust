@@ -14,10 +14,10 @@ fn main() {
 	let mut fuel = 34;
 	fuel = 60;
 
-	let a; // error: unable to infer enough type information about `_`; type annotations required
-	// println!("a is: {}", a); // error: use of possibly uninitialized variable 
-	a = 6;
-	let n: u32;
+	let n; // error: unable to infer enough type information about `_`; type annotations required
+	// println!("n is: {}", n); // error: use of possibly uninitialized variable 
+	n = -2;
+	let n: i32;
 	// let n: i32 = -2; // n is a binding of type i32 and the value -2
 	let x = 42u8;
 	let magic_number = 3.14f64;

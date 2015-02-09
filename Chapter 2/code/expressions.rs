@@ -23,4 +23,5 @@ fn main() {
 	};
 	println!("n2 is: {:?}", n2);  // n2 is ()
 }
-// 
+// n1 is: 7
+// n2 is: () 

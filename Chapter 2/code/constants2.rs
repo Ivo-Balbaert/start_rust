@@ -4,7 +4,7 @@ static GAMENAME: &'static str = "Monster Attack";
 fn main() {
 	println!("The Game you are playing is called {}.", GAMENAME);
 	println!("You start with {} health points.", MAXHEALTH);
-	println!("In the Game {0} you start with {1} % health, yes you heard it correct: {1} points!", 
+	println!("In the Game {0} you start with {1} % health, yes you read it correctly: {1} points!", 
 		GAMENAME, MAXHEALTH);
 	println!("You have {points} % health", points=70);
 

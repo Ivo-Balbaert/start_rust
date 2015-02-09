@@ -36,7 +36,7 @@ fn main() {
     println!("Exited the outer dungeon!");
 
     // for in loop:
-    for n in range(1, 11) { 	
+    for n in 1..11 { 	
     	println!("The square of {} is {}", n, n * n);
     }
     
