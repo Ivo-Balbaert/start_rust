@@ -1,0 +1,9 @@
+[package]
+
+name = "monsters"
+version = "0.0.1"
+authors = ["Ivo Balbaert <ivo.balbaert@telenet.be>"]
+
+[dependencies]
+log = "0.2.5"
+mac = "*"
