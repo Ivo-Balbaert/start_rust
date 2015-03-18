@@ -1,6 +1,6 @@
-use std::io::println;
+use std::old_io;
 
 fn main() {
-	// warning: use of unstable item
-	println("Welcome to the Game!");
+	// use of unstable library feature old_io:
+	old_io::println("Welcome to the Game!");
 }
