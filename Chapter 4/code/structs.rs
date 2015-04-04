@@ -24,6 +24,10 @@ fn main() {
 	println!("Player {} is at level {}", pl1.nname, pl1.level);
 	pl1.level = 3;
 
+	// pointers do automatic dereferencing when accessing data structure elements:
+	let ps = &Player{ nname: "John", health: 95, level: 1 };
+    println!("{} == {}", ps.nname, (*ps).nname);
+
 	// destructuring a struct:
 	let Player{health: ht, nname: nn, ..} = pl1;
 	println!("Player {} has health {}", nn, ht);
@@ -31,4 +35,5 @@ fn main() {
 // Health 73 - Level 2
 // weight is 250 kilograms
 // Player Dzenan is at level 2
+// John == John
 // Player Dzenan has health 73

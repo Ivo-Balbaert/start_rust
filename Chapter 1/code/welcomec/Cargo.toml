@@ -1,0 +1,5 @@
+[package]
+
+name = "welcomec"
+version = "0.0.1"
+authors = ["Ivo Balbaert <ivo.balbaert@telenet.be>"]

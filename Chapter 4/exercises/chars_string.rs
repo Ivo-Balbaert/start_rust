@@ -24,11 +24,6 @@ fn main() {
 	for c in greeting.chars() {
     	print!("{} - ", c);
 	}
-	println!("");
-	println!("Graphemes:");
-	for c in greeting.graphemes(true) {
-    	print!("{} - ", c);
-	}
 }
 // Bytes:
 // 72 - 101 - 108 - 108 - 111 - 44 - 32 - 228 - 184 - 150 - 231 - 149 - 140 - 33 - 

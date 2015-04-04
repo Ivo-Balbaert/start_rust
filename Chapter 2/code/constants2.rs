@@ -1,20 +1,24 @@
-static MAXHEALTH: i32 = 100;
-static GAMENAME: &'static str = "Monster Attack";
+static MAX_HEALTH: i32 = 100;
+static GAME_NAME: &'static str = "Monster Attack";
+const PI: f32 = 3.14;
 
 fn main() {
-	println!("The Game you are playing is called {}.", GAMENAME);
-	println!("You start with {} health points.", MAXHEALTH);
+	println!("The Game you are playing is called {}.", GAME_NAME);
+	println!("You start with {} health points.", MAX_HEALTH);
 	println!("In the Game {0} you start with {1} % health, yes you read it correctly: {1} points!", 
-		GAMENAME, MAXHEALTH);
+		GAME_NAME, MAX_HEALTH);
 	println!("You have {points} % health", points=70);
 
 	// formatting:
-	println!("MAXHEALTH is {:x} in hexadecimal", MAXHEALTH);
-	println!("MAXHEALTH is {:b} in binary", MAXHEALTH);
+	println!("MAX_HEALTH is {:x} in hexadecimal", MAX_HEALTH);
+	println!("MAX_HEALTH is {:b} in binary", MAX_HEALTH);
+
+	println!("pi is {:e} in floating point notation", PI);
 }
 // The Game you are playing is called Monster Attack.
 // You start with 100 health points.
 // In the Game Monster Attack you start with 100 % health, yes you heard it correct: 100 points!
 // You have 70 % health
-// MAXHEALTH is 64 in hexadecimal
-// MAXHEALTH is 1100100 in binary
+// MAX_HEALTH is 64 in hexadecimal
+// MAX_HEALTH is 1100100 in binary
+// pi is 3.14e0 in floating point notation

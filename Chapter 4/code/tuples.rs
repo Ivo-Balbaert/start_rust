@@ -1,7 +1,7 @@
 fn main() {
 	let thor = ("Thor", true, 3500u32);
-	println!("{:?}", thor); // ("Thor", true, 3500u)
-	// type of thor: (&str, bool, usize)
+	println!("{:?}", thor); // ("Thor", true, 3500)
+	// type of thor: (&str, bool, u32)
 	println!("{} - {} - {}", thor.0, thor.1, thor.2);
 
 	// destructuring:

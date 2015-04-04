@@ -4,12 +4,19 @@ fn main() {
 
 	if dead {
 		println!("Game over!");
-		return();
+		return;
+	}
+	
+	if dead {
+		println!("Game over!");
+		return;
+	} else {
+		println!("You still have a chance to win!");
 	}
 
 	if health >= 50 {
 		println!("Continue to fight!");
-	} else if health >= 20 && health < 50 {
+	} else if health >= 20 {
 		println!("Stop the battle and gain strength!");
 	} else {
 		println!("Hide and try to recover!");
@@ -17,8 +24,7 @@ fn main() {
 
 	let active = if health >= 50 {
 					true
-				 }
-				 else {
+				 } else {
 				 	false
 				 };
 	println!("Am I active? {}", active);

@@ -1,6 +1,6 @@
 fn main() {
-	// (2, 'a') == (3.14, false)
-	// error: mismatched types: expected `()`, found `bool` (expected (), found bool)
+	// (2, 'a') == (5, false);
+	// error: mismatched types: expected `char`, found `bool` (expected char, found bool)
 	if () == () {
 		println!("The unit value is an empty tuple");
 	}
