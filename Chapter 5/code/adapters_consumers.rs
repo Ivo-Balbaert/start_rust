@@ -5,6 +5,7 @@ fn main() {
 	let rng = 0..1000;
 	let rngvec = rng.collect::<Vec<i32>>();
 	println!("{:?}", rngvec);
+
 	// find:
 	let mut rng = 0..1000;
 	let forty_two = rng.find(|n| *n >= 42);
@@ -19,15 +20,23 @@ fn main() {
 	let rng_even = rng.filter(|n| is_even(*n))
 					  .collect::<Vec<i32>>();
 	println!("{:?}", rng_even);
+
+	// alternative without collect:
+	let rng = 1..100;
+	let rng_even = rng.filter(|n| is_even(*n));
+	for x in rng_even {
+		println!("{}", x);
+	}
+
 	// map:
 	println!("MAP:");
-	rng = 0..1000;
+	let rng = 0..1000;
  	let rng_even_pow3 = rng.filter(|n| is_even(*n))
  						   .map(|n| n * n * n)
 					       .collect::<Vec<i32>>();
 	println!("{:?}", rng_even_pow3);
 	println!("TAKE:");
-	rng = 0..1000;
+	let rng = 0..1000;
 	let rng_even_pow3_first5 = rng.filter(|n| is_even(*n))
  						   		  .map(|n| n * n * n)
  						   		  .take(5)

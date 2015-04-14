@@ -1,3 +1,6 @@
+// if r < Float::zero()
+// error: use of unstable library feature 'std_misc': unsure about its place in the world
+
 use std::num::Float;
 
 fn main() {

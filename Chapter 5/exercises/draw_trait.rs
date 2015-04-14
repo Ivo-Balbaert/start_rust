@@ -5,6 +5,7 @@ trait Draw {
 struct S1 {
    data_s1: i32
 }
+
 struct S2 {
    data_s2: f64
 }

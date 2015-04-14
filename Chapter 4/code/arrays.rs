@@ -53,6 +53,12 @@ fn main() {
 	let fifty_four = numbers.pop(); // fifty_four now contains 54
 	println!("{:?}", numbers);
 
+	// iterate over a vector:
+	let values = vec![1, 2, 3];
+	for n in values {
+    	println!("{}", n);
+	}
+
 	// slices:
 	let slc = &magic_numbers[1..4]; // only the items 42, 47 and 45 
 	assert_eq!([42, 47, 45], slc);
@@ -95,6 +101,9 @@ fn main() {
 // Collected the range into: [0, 1, 2, 3, 4, 5, 6]
 // [42, 54]
 // [42]
+// 1
+// 2
+// 3
 
 // Earth
 // M e i l n r

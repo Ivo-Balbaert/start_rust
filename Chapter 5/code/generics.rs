@@ -1,4 +1,4 @@
-use std::num::Float;
+	use std::num::Float;
 
 struct Person {
 	name: &'static str,
@@ -28,9 +28,9 @@ fn main() {
 	let p2 = Person{name: "Vin Diesel", id: 12};
 	let p3 = Person{name: "Robin Hood", id: 42};
 	let op1: Option<Person> = Some(p1);
-	let pvec = vec![p2, p3];
-	// let pvec: Vec<Person> = vec![p2, p3]; // type annotation is not necessary
-
+	let pvec: Vec<Person> = vec![p2, p3]; // type annotation is not necessary
+	// let pvec = vec![p2, p3];
+	
 	// using Result<T, E>
 	let m = sqroot(42.0);
 	// let m = sqroot(-5.0);
@@ -41,7 +41,9 @@ fn main() {
 }
 
 fn sqroot(r: f32) -> Result<f32, String> {
-    if r < 0.0 { return Err("Number cannot be negative!".to_string()); }
+    if r < 0.0 { 
+    	return Err("Number cannot be negative!".to_string()); 
+    }
     Ok(Float::sqrt(r))
 }
 

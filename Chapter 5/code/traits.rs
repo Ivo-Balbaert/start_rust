@@ -60,7 +60,6 @@ fn main() {
 	println!("Oh no, I hear: {}", zmb1.noise());
 	zmb1.attack();
 	println!("{:?}", zmb1);
-
 }
 // Oh no, I hear: Aaargh!
 // The Zombie bites! Your health lowers with 30 damage points.
