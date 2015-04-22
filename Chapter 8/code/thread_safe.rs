@@ -7,17 +7,18 @@ fn main() {
 	let data = Arc::new(Mutex::new(health));
     for i in 2..5 {
         let mutex = data.clone();
-        thread::scoped(move || {
-            let mut health = mutex.lock();
-            match health {
-                Ok(mut health) => *health *= i,
-                Err(str) => println!("{}", str)
+        thread::spawn(move || {
+               let health = mutex.lock();
+               match health {
+                    // health is multiplied by i:
+                    Ok(mut health) => *health *= i,
+                    Err(str) => println!("{}", str)
             }
-        });
+        }).join().unwrap();
     };
     health = *data.lock().unwrap();
     println!("health after: {:?}", health);
 }
 // health before: 12
 // health after: 288
-// 288 = 12 * 2 * 3 * 4
+// because: 288 = 12 * 2 * 3 * 4

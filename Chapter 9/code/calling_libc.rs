@@ -1,3 +1,7 @@
+// error: use of unstable library feature 'libc'
+// help: add #![feature(libc)] to the crate attributes to enable
+#![feature(libc)]
+
 extern crate libc;
 use libc::puts;
 use std::ffi::CString;

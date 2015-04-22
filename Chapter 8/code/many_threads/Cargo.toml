@@ -1,9 +1,9 @@
 [package]
-
-name = "monsters"
-version = "0.0.1"
+name = "many_threads"
+version = "0.1.0"
 authors = ["Ivo Balbaert <ivo.balbaert@telenet.be>"]
 
 [dependencies]
-log = "0.3.1"
-mac = "*"
+num_cpus = "*"
+threadpool = "*"
+

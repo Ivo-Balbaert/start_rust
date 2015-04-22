@@ -1,9 +1,4 @@
 [package]
-
-name = "monsters"
+name = "cube"
 version = "0.0.1"
 authors = ["Ivo Balbaert <ivo.balbaert@telenet.be>"]
-
-[dependencies]
-log = "0.3.1"
-mac = "*"

@@ -1,5 +1,5 @@
 #[repr(C)]
-#[derive(Copy)]
+#[derive(Copy, Clone)]
 #[derive(Debug)]
 struct Complex {
     re: f32,
@@ -16,8 +16,8 @@ fn tan(z: Complex) -> Complex {
 }
 
 fn main() {
-    let z = Complex { re: -1., im: 0. }; // z is -1 + i
+    let z = Complex { re: -1., im: 1. }; // z is -1 + i
     let z_tan = tan(z);
     println!("the tangens of {:?} is {:?}", z, z_tan);
 }
-// the tangens of Complex { re: -1, im: 0 } is Complex { re: -1.557408, im: 0 }
+// the tangens of Complex { re: -1, im: 1 } is Complex { re: -0.271753, im: 1.083923 }

@@ -42,7 +42,6 @@ fn main() {
     };
     let res = print_add_move(strength); 
 	assert_eq!(res, 744); // 42 + 702 
-
 }
 
 fn triples(s: i32) -> i32 {

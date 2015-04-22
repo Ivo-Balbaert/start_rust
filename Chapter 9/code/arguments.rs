@@ -7,14 +7,19 @@ fn main() {
    for arg in args.iter() {
    		println!("Next argument is: {}", arg)
    }
-   println!("I got {:?} arguments: {:?}.", args.len() - 1, args.tail());
-   
-   match &args[..] {
-    [ref progname] => { no() }, // no arguments passed
-    [_, ref arg1] => { one() }, // one argument passed
-    [_, ref arg1, ref arg2] => { two() }, // two arguments passed
-    _ => { help(); } // all the other cases
-   }
+// tail() is unstable in 1.0 Beta 2:
+   // println!("I got {:?} arguments: {:?}.", args.len() - 1, args.tail());
+   println!("I got {:?} arguments: ", args.len() - 1);
+   for n in 1..args.len() {
+      println!("The {}th argument is {}", n, args[n]);
+   } 
+  // slice pattern is experimental in 1.0 Beta 2 
+   // match &args[..] {
+   //  [ref progname] => { no() }, // no arguments passed
+   //  [_, ref arg1] => { one() }, // one argument passed
+   //  [_, ref arg1, ref arg2] => { two() }, // two arguments passed
+   //  _ => { help(); } // all the other cases
+   // }
 
    // OS-environment variables:
    let osvars = env::vars();
@@ -23,12 +28,12 @@ fn main() {
    }
 }
 
-fn no() { println!("no arguments");}
-fn one() { println!("one argument");}
-fn two() { println!("two arguments"); }
+// fn no() { println!("no arguments");}
+// fn one() { println!("one argument");}
+// fn two() { println!("two arguments"); }
 
-fn help() {
-    println!("Usage:
-              arguments <string> Check whether string is ok.
-              arguments func1 <integer> Apply func1 to integer");
-}
+// fn help() {
+//     println!("Usage:
+//               arguments <string> Check whether string is ok.
+//               arguments func1 <integer> Apply func1 to integer");
+// }

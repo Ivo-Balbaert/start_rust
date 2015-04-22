@@ -16,16 +16,17 @@ fn main() {
 
     let mut ids = Vec::with_capacity(NTHREADS);
     for _ in 0..NTHREADS {
-        ids.push(rx.recv());
+        ids.push(rx.recv().unwrap());
     }
 
     println!("{:?}", ids);
 }
-// Order is different each time the program is run:
-// thread 4 done
-// thread 3 done
-// thread 1 done
-// thread 6 done
-// thread 2 done
+// -- The order is different each time the program is run: --
 // thread 0 done
-// [Ok(3), Ok(4), Ok(1), Ok(6), Ok(2), Ok(0), Ok(5)]
+// thread 1 done
+// thread 2 done
+// thread 3 done
+// thread 5 done
+// thread 4 done
+// thread 6 done
+// [1, 0, 2, 3, 5, 4, 6]

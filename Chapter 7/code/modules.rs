@@ -23,11 +23,17 @@ mod game1 {
     		println!("You called subfunc1 in subgame1!");
     	}
     }
+
+    pub struct Magician {
+        pub name: String,
+        pub age: i32,
+        power: i32
+    }
 }
 
 fn main() {
 	// game1::func1(); // error: function `func1` is private
-	game1::func2(); // works without the use 
+	game1::func2(); // works without the use import
 
 	// calling a nested module:
 	game1::subgame1::subfunc1();
@@ -36,7 +42,11 @@ fn main() {
 	func2();
 	gf2();
     sf1();
+
+   // error: field `power` of struct `game1::Magician` is private
+   // let mag1 = game1::Magician { name: "Gandalf".to_string(), age: 725, power: 98};
 }
+   
 // You called func2 in game1!
 // You called subfunc1 in subgame1!
 // You called func2 in game1!
