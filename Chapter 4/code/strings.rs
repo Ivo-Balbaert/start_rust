@@ -22,7 +22,7 @@ fn main() {
 	let strm = "Sauron".to_string();
     println!("{}", &*strm);
 // comparing Strings and string slices:
-	if &str3[..] == magician1 {
+	if &str3 == magician1 {
 		println!("We got the same magician alright!")
 	}
 // building a String

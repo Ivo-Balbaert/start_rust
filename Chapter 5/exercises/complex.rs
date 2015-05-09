@@ -1,4 +1,4 @@
-use std::num::Float;
+use std::f64;
 
 struct Complex {
 	real: f64,
@@ -13,7 +13,7 @@ impl Complex {
 	fn to_string(&self) -> String {
 		if self.imag > 0.0 { format!("{} + {}i", self.real, self.imag) }
 		else if self.imag < 0.0 { format!("{} - {}i", self.real, 
-										Float::abs(self.imag)) }
+										f64::abs(self.imag)) }
 		else { format!("{}", self.real) }
 	}
 
@@ -27,7 +27,7 @@ impl Complex {
 	}
 
 	fn abs(&self) -> f64 {
-		Float::sqrt((self.real * self.real) + (self.imag * self.imag))
+		f64::sqrt((self.real * self.real) + (self.imag * self.imag))
 	}
 
 }

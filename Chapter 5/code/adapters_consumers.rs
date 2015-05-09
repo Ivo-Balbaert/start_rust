@@ -4,6 +4,8 @@ fn main() {
 	// collect:
 	let rng = 0..1000;
 	let rngvec = rng.collect::<Vec<i32>>();
+	// alternative:
+	// let rngvec: Vec<i32> = rng.collect();
 	println!("{:?}", rngvec);
 
 	// find:

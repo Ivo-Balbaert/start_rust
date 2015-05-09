@@ -1,8 +1,9 @@
 static MAX_HEALTH: i32 = 100;
 static GAME_NAME: &'static str = "Monster Attack";
-const PI: f32 = 3.14;
 
 fn main() {
+	const PI: f32 = 3.14;
+
 	println!("The Game you are playing is called {}.", GAME_NAME);
 	println!("You start with {} health points.", MAX_HEALTH);
 	println!("In the Game {0} you start with {1} % health, yes you read it correctly: {1} points!", 

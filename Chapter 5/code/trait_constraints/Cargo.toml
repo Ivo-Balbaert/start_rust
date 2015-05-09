@@ -1,0 +1,10 @@
+[package]
+name = "trait_constraints"
+version = "0.0.1"
+authors = ["Ivo Balbaert <ivo.balbaert@telenet.be>"]
+
+[[bin]]
+name = "trait_constraints"
+
+[dependencies]
+num = "*"

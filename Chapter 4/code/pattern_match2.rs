@@ -27,7 +27,7 @@ fn main() {
         (name, demi, _) if demi => {
                             print!("This is a demigod ");
                             println!("called {}", name);
-                        },
+                        }
         (name, _, _) if name == "Thor" => println!("This is Thor!"),
         (_, _, pow)  if pow <= 1000    => println!("This is a powerless god"),
         _ => println!("This is something else")
