@@ -4,8 +4,8 @@ fn main() {
     print!("Give a positive secret number: ");
     let mut buf = String::new();
 	io::stdin().read_line(&mut buf)
-               .ok()
-               .expect("Failed to read number");
+        .ok()
+        .expect("Failed to read number");
     let input_num: Result<u32, _> = buf.trim().parse();
 
     // println!("Unwrap found {}", input_num.unwrap());

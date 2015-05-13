@@ -3,10 +3,10 @@ fn main() {
 	let aliens = ["Cherfer", "Fynock", "Shirack", "Zuxu"];
 	println!("{:?}", aliens);
 	let aliens: [&str; 4] = ["Cherfer", "Fynock", "Shirack", "Zuxu"];
-	// a mutable version:
+		// a mutable version:
 	let mut aliens = ["Cherfer", "Fynock", "Shirack", "Zuxu"];
 	let zuxus = ["Zuxu"; 3]; // ["Zuxu", "Zuxu", "Zuxu"];
-	// empty array:
+		// empty array:
 	let mut empty: [i32; 0] = [];
 	println!("{:?}", empty); // []
 	println!("The first item is: {}", aliens[0]);
@@ -34,7 +34,7 @@ fn main() {
 	for a in &aliens { 
 		println!("The next alien is {}", a); 
 	}
-		
+	
 	// making vectors:
 	let mut numbers: Vec<i32> = Vec::new();
 	// let mut numbers: Vec<_> = Vec::new();
@@ -44,7 +44,7 @@ fn main() {
 	let mut ids: Vec<i32> = Vec::with_capacity(25);
 	
 	let rgvec: Vec<u32> = (0..7).collect();
-    println!("Collected the range into: {:?}", rgvec);
+	println!("Collected the range into: {:?}", rgvec);
 
     // push and pop:
 	numbers.push(magic_numbers[1]);
@@ -56,7 +56,7 @@ fn main() {
 	// iterate over a vector:
 	let values = vec![1, 2, 3];
 	for n in values {
-    	println!("{}", n);
+	    println!("{}", n);
 	}
 
 	// slices:
@@ -72,16 +72,16 @@ fn main() {
 	// collect:
 	let magician = "Merlin";
 	let mut chars: Vec<char> = magician.chars().collect();
-    chars.sort();
-    for c in chars.iter() {
-    	print!("{} ", c);
-    }
-    let v: Vec<&str> = "The wizard of Oz".split(' ').collect();
-    assert_eq!(v, vec!["The", "wizard", "of", "Oz"]);
+	chars.sort();
+	for c in chars.iter() {
+	    print!("{} ", c);
+	}
+	let v: Vec<&str> = "The wizard of Oz".split(' ').collect();
+	    assert_eq!(v, vec!["The", "wizard", "of", "Oz"]);
 
-    let v: Vec<&str> = "abc1def2ghi".split(|c: char| c.is_numeric()).collect();
-    assert_eq!(v, vec!["abc", "def", "ghi"]);
- }
+	let v: Vec<&str> = "abc1def2ghi".split(|c: char| c.is_numeric()).collect();
+	    assert_eq!(v, vec!["abc", "def", "ghi"]);
+	}
 // ["Cherfer", "Fynock", "Shirack", "Zuxu"]
 // []
 // The first item is: Cherfer
