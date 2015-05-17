@@ -20,7 +20,7 @@ impl Monster for Alien {
 	fn new(mut h: u32, d: u32) -> Alien {
 		// constraints:
 		if h > 100 { h = 100; }
-		Alien {health: h, damage: d}
+		Alien { health: h, damage: d }
 	}
 
 	fn attack(&self) {
@@ -36,7 +36,7 @@ impl Monster for Zombie {
 	fn new(mut h: u32, d: u32) -> Zombie {
 		// constraints:
 		if h > 100 { h = 100; }
-		Zombie {health: h, damage: d}
+		Zombie { health: h, damage: d }
 	}
 
 	fn attack(&self) {
@@ -56,7 +56,7 @@ impl Monster for Zombie {
 // }
 
 fn main() {
-	let zmb1 = Zombie {health: 75, damage: 15};
+	let zmb1 = Zombie { health: 75, damage: 15 };
 	println!("Oh no, I hear: {}", zmb1.noise());
 	zmb1.attack();
 	println!("{:?}", zmb1);

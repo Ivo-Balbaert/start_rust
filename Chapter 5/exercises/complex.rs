@@ -7,7 +7,7 @@ struct Complex {
 
 impl Complex {
 	fn new(re: f64, im: f64) -> Complex {
-		Complex{real: re, imag: im}
+		Complex{ real: re, imag: im }
 	}
 
 	fn to_string(&self) -> String {
@@ -18,7 +18,7 @@ impl Complex {
 	}
 
 	fn add(&self, c: Complex) -> Complex {
-		Complex{real: self.real + c.real, imag: self.imag + c.imag}
+		Complex{ real: self.real + c.real, imag: self.imag + c.imag }
 	}
 
 	fn times_ten(&mut self)  {
@@ -33,7 +33,7 @@ impl Complex {
 }
 
 fn main() {
-	let c1 = Complex{real: 2.0, imag: 5.0};
+	let c1 = Complex{ real: 2.0, imag: 5.0 };
 	// same number, but with constructor new:
 	let mut c2 = Complex::new(2.0, 5.0);
 	// println!("{:?}", c1);

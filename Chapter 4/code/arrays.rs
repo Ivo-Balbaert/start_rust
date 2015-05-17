@@ -59,6 +59,13 @@ fn main() {
 	    println!("{}", n);
 	}
 
+	// mutate while iterating:
+	let mut vec = vec![1, 2, 3, 4];
+	for x in vec.iter_mut() {
+        *x += 1;
+    }
+    println!("{:?}", vec);
+
 	// slices:
 	let slc = &magic_numbers[1..4]; // only the items 42, 47 and 45 
 	assert_eq!([42, 47, 45], slc);
@@ -104,6 +111,7 @@ fn main() {
 // 1
 // 2
 // 3
-
+// [2, 3, 4, 5]
+//
 // Earth
 // M e i l n r

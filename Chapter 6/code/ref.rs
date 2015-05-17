@@ -18,7 +18,7 @@ fn main() {
 	}
 	println!("m has changed to {}!", m);
 
-	let mag = Magician { name: "Gandalf", power: 4625};
+	let mag = Magician { name: "Gandalf", power: 4625 };
 	let name = {
         // `ref_to_x` is a reference to the `x` field of `point`
         let Magician { name: ref ref_to_name, power: _ } = mag;

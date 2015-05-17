@@ -1,5 +1,5 @@
 fn main() {
-	// while loop:
+    // while loop:
 	let max_power = 10;
 	let mut power = 1;
 	while power < max_power {
@@ -31,7 +31,8 @@ fn main() {
             // break; // breaks only from the inner loop
             break 'outer; // breaks to the outer loop
         }
-        println!("This treasure can sadly never be reached - ");
+        // error: unreachable statement
+        // println!("This treasure can sadly never be reached - ");
     }
     println!("Exited the outer dungeon!");
 

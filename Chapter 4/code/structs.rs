@@ -20,7 +20,7 @@ fn main() {
 	println!("weight is {} kilograms", kgm);
 
 	// struct:
-	let mut pl1 = Player{nname: "Dzenan", health: 73, level: 2};
+	let mut pl1 = Player{ nname: "Dzenan", health: 73, level: 2 };
 	println!("Player {} is at level {}", pl1.nname, pl1.level);
 	pl1.level = 3;
 
@@ -29,7 +29,7 @@ fn main() {
     println!("{} == {}", ps.nname, (*ps).nname);
 
 	// destructuring a struct:
-	let Player{health: ht, nname: nn, ..} = pl1;
+	let Player{ health: ht, nname: nn, .. } = pl1;
 	println!("Player {} has health {}", nn, ht);
 }
 // Health 73 - Level 2

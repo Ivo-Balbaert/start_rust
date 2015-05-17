@@ -1,4 +1,4 @@
-	use std::num::Float;
+use std::f32;
 
 struct Person {
 	name: &'static str,
@@ -24,9 +24,9 @@ fn main() {
 	let name: Option<&str> = Some("Joyce");
 	// let magic: Option<f32> = Some(42); // error: mismatched types
 
-	let p1 = Person{name: "James Bond", id: 7};
-	let p2 = Person{name: "Vin Diesel", id: 12};
-	let p3 = Person{name: "Robin Hood", id: 42};
+	let p1 = Person{ name: "James Bond", id: 7 };
+	let p2 = Person{ name: "Vin Diesel", id: 12 };
+	let p3 = Person{ name: "Robin Hood", id: 42 };
 	let op1: Option<Person> = Some(p1);
 	let pvec: Vec<Person> = vec![p2, p3]; // type annotation is not necessary
 	// let pvec = vec![p2, p3];
@@ -44,7 +44,7 @@ fn sqroot(r: f32) -> Result<f32, String> {
     if r < 0.0 { 
     	return Err("Number cannot be negative!".to_string()); 
     }
-    Ok(Float::sqrt(r))
+    Ok(f32::sqrt(r))
 }
 
 fn second<T>(pair: Pair<T>) {
