@@ -1,5 +1,5 @@
 fn main() {
-	let outer = 42;
+    let outer = 42;
     { // start code block
         // This variable only exists in this block
         let inner = 3.14;

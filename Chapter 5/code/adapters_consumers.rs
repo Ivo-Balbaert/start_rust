@@ -34,15 +34,15 @@ fn main() {
 	println!("MAP:");
 	let rng = 0..1000;
  	let rng_even_pow3 = rng.filter(|n| is_even(*n))
- 						   .map(|n| n * n * n)
-					       .collect::<Vec<i32>>();
+                           .map(|n| n * n * n)
+                           .collect::<Vec<i32>>();
 	println!("{:?}", rng_even_pow3);
 	println!("TAKE:");
 	let rng = 0..1000;
 	let rng_even_pow3_first5 = rng.filter(|n| is_even(*n))
- 						   		  .map(|n| n * n * n)
- 						   		  .take(5)
-					       		  .collect::<Vec<i32>>();
+								  .map(|n| n * n * n)
+								  .take(5)
+                                  .collect::<Vec<i32>>();
 	println!("{:?}", rng_even_pow3_first5);
 }
 

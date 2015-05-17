@@ -84,11 +84,11 @@ fn main() {
 	    print!("{} ", c);
 	}
 	let v: Vec<&str> = "The wizard of Oz".split(' ').collect();
-	    assert_eq!(v, vec!["The", "wizard", "of", "Oz"]);
+	assert_eq!(v, vec!["The", "wizard", "of", "Oz"]);
 
 	let v: Vec<&str> = "abc1def2ghi".split(|c: char| c.is_numeric()).collect();
-	    assert_eq!(v, vec!["abc", "def", "ghi"]);
-	}
+	assert_eq!(v, vec!["abc", "def", "ghi"]);
+}
 // ["Cherfer", "Fynock", "Shirack", "Zuxu"]
 // []
 // The first item is: Cherfer

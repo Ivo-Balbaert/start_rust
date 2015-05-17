@@ -7,17 +7,17 @@ fn main() {
 }
 
 fn sqroot<T: num::traits::Float>(r: T) -> Result<T, String> {
-	if r < num::zero() { 
-		return Err("Number cannot be negative!".to_string()); 
- 	}
+    if r < num::zero() { 
+        return Err("Number cannot be negative!".to_string()); 
+    }
     Ok(num::traits::Float::sqrt(r))
 }
 
 // trait constraint written with where clause syntax:
 fn sqroot2<T>(r: T) -> Result<T, String> where T: num::traits::Float {
-	if r < num::zero() { 
-		return Err("Number cannot be negative!".to_string()); 
- 	}
+    if r < num::zero() { 
+        return Err("Number cannot be negative!".to_string()); 
+    }
     Ok(num::traits::Float::sqrt(r))
 }
 // The square root of 42 is Ok(6.480741)

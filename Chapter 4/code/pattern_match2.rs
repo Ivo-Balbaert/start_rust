@@ -8,7 +8,7 @@ fn main() {
 	}
 
 	// matching several values in a branch:
-	let magical_number: i32 = 42;
+    let magical_number: i32 = 42;
     match magical_number {
     	// Match a single value
         1 => println!("Unity!"),

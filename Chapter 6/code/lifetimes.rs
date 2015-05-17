@@ -50,7 +50,7 @@ fn main() {
 	println!("{:?}", mag);
 	println!("{:?}", mag2);
 	// mag, mag2 and mag3 are 3 different objects: their addresses are different:
-	println!("{:?}", &mag as *const MagicNumber); // address is 0x23fb38
+    println!("{:?}", &mag as *const MagicNumber); // address is 0x23fb38
     println!("{:?}", &mag2 as *const MagicNumber); // address is 0x23fb30
     println!("{:?}", &mag3 as *const MagicNumber); // address is 0x23fb28
 }

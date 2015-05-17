@@ -33,14 +33,14 @@ mod game1 {
 
 fn main() {
 	// game1::func1(); // error: function `func1` is private
-	game1::func2(); // works without the use import
+    game1::func2(); // works without the use import
 
 	// calling a nested module:
-	game1::subgame1::subfunc1();
+    game1::subgame1::subfunc1();
 
 	// importing a function or module with use:
-	func2();
-	gf2();
+    func2();
+    gf2();
     sf1();
 
    // error: field `power` of struct `game1::Magician` is private

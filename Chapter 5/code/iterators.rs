@@ -12,13 +12,13 @@ fn main() {
         	},
         	None => { break }
     	}
-	}
+    }
 	println!("");
 
 	// shorter way:
 	let mut rng = 0..7;
     for n in rng {
-    	print!("{} - ", n);
+        print!("{} - ", n);
     } // 0 - 1 - 2 - 3 - 4 - 5 - 6 - 
     println!("");
 

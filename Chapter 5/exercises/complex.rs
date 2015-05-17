@@ -12,8 +12,7 @@ impl Complex {
 
 	fn to_string(&self) -> String {
 		if self.imag > 0.0 { format!("{} + {}i", self.real, self.imag) }
-		else if self.imag < 0.0 { format!("{} - {}i", self.real, 
-										f64::abs(self.imag)) }
+		else if self.imag < 0.0 { format!("{} - {}i", self.real, f64::abs(self.imag)) }
 		else { format!("{}", self.real) }
 	}
 

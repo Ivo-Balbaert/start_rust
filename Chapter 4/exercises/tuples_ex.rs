@@ -16,8 +16,6 @@ fn main() {
 	if () == () {
 		println!("The unit value is an empty tuple");
 	}
-
-
 }
 // 4 - 5 - false
 // 4 - 5 - false

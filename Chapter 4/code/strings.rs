@@ -37,7 +37,7 @@ fn main() {
 // iterate over String:
 // characters:
 	for c in magician1.chars() {
-        print!("{} - ", c); 
+        print!("{} - ", c);
     } // M - e - r - l - i - n -
 // words:
 	for word in str1.split(" ") {	

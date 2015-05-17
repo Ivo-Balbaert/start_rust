@@ -8,8 +8,8 @@ fn main() {
 
     // The following will be rejected, since y has a shorter lifetime than x.
     let mut x = &3;
-	{
-		let mut y = 4;
+    {
+	    let mut y = 4;
 		// x = &y; // error: `y` does not live long enough
-	} // y is freed here, but x still lives...
+    } // y is freed here, but x still lives...
 }

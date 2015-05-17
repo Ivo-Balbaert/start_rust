@@ -5,7 +5,7 @@ use std::thread;
 use threadpool::ThreadPool;
 
 fn main() {
-	let ncpus = num_cpus::get();
+    let ncpus = num_cpus::get();
     println!("The number of cpus in this machine is: {}", ncpus);
 
     let pool = ThreadPool::new(ncpus);

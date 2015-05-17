@@ -11,7 +11,7 @@ macro_rules! mac1 {
 }
 
 macro_rules! printall {
-	( $( $arg:expr ), * ) => ( {$( print!("{} / ", $arg) ); *} );
+    ( $( $arg:expr ), * ) => ( {$( print!("{} / ", $arg) ); *} );
 }
 
 macro_rules! create_fn {
@@ -48,9 +48,9 @@ test_eq!(seven_times_six_is_forty_two, 7 * 6, 42);
 test_eq!(seven_times_six_is_not_forty_three, 7 * 6, 43);
 
 fn main() {
-	welcome!();  // Welcome to the Game!
-	mac1!(42); // arg is 42
-	printall!("hello", 42, 3.14); // hello / 42 / 3.14 /
+    welcome!();  // Welcome to the Game!
+    mac1!(42); // arg is 42
+    printall!("hello", 42, 3.14); // hello / 42 / 3.14 /
     fn1();
     // massert!(1 == 42);
 

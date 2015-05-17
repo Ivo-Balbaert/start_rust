@@ -41,7 +41,7 @@ fn main() {
     	m + s
     };
     let res = print_add_move(strength); 
-	assert_eq!(res, 744); // 42 + 702 
+    assert_eq!(res, 744); // 42 + 702 
 }
 
 fn triples(s: i32) -> i32 {
@@ -53,10 +53,9 @@ fn triplesref(s: &i32) -> i32 {
 	3 * *s
 }
 
-fn again<F: Fn(i32) -> i32>(f: F, s: i32, ) -> i32 {
+fn again<F: Fn(i32) -> i32>(f: F, s: i32) -> i32 {
     f(f(s))
 }
-
 // Output:
 // My tripled strength equals 78
 // My strength is still 26
