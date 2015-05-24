@@ -42,7 +42,7 @@ fn main() {
     }
 
     let mut x = 10;
-    for _ in 1 .. x { x -= 1; print!("."); } 
+    for _ in 1..x { x -= 1; print!("."); } 
     
 }
 // 1 2 3 4 5 6 7 8 9 I gain Infinite power!

@@ -1,3 +1,5 @@
+// #![feature(box_syntax)]   // error: unstable feature in stable releases
+
 fn main() {
 	let health = 32;
 	let mut game = "Space Invaders";
@@ -36,7 +38,8 @@ fn main() {
 
 	// boxing values onto the heap:
 	let x = Box::new(5i32); 
-	// error: box expression syntax is experimental; you can call `Box::new` instead.
+	// let y = box 6; // error: box expression syntax is experimental; you can call `Box::new` instead.
+	// or use feature gate #![feature(box_syntax)]
 	// let x = box 5i32; 
 
 }

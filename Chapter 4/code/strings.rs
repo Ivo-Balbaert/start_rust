@@ -3,7 +3,8 @@ use std::string;
 fn main() {
 // string slices of type &str
 	let magician1 = "Merlin";
-	let magician2: &'static str = "Gandalf";
+	// let magician2: &'static str = "Gandalf";
+    let magician2: &str = "Gandalf";
 	let greeting = "Hello, 世界!";
 	println!("Magician {} greets magician {} with {}", 
 				magician1, magician2, greeting);
@@ -21,10 +22,16 @@ fn main() {
 // turning a String into a slice with &*
 	let strm = "Sauron".to_string();
     println!("{}", &*strm);
+    
 // comparing Strings and string slices:
+    if &str3[..] == magician1 {
+        println!("We got the same magician alright!")
+    }
+    // shorter:
 	if &str3 == magician1 {
 		println!("We got the same magician alright!")
 	}
+
 // building a String
 	let c1 = 'Ɵ';  // character c1
 	str1.push(c1);		  
@@ -39,6 +46,7 @@ fn main() {
 	for c in magician1.chars() {
         print!("{} - ", c);
     } // M - e - r - l - i - n -
+
 // words:
 	for word in str1.split(" ") {	
         print!("{} / ", word);
@@ -53,15 +61,20 @@ fn main() {
 	println!("Length of Merlin: {}", how_long(magician1));
 	println!("Length of str1: {}", how_long(&str1));
 	println!("Length of str1: {}", how_long(&str1[..]));
+
+// escape characters and raw strings r"" or r#""#:
+    println!("{}", "Ru\nst");
+    println!("{}", r"Ru\nst");
+    println!("{}", r#"Ru\nst"#);
 }
 
 fn how_long(s: &str) -> usize {	s.len() }
-
 
 // Magician Merlin greets magician Gandalf with Hello, 世界!
 // Merlin
 // Merlin
 // Sauron
+// We got the same magician alright!
 // We got the same magician alright!
 // Ɵ
 // Ɵ Level 1 is finished - 
@@ -72,3 +85,7 @@ fn how_long(s: &str) -> usize {	s.len() }
 // Length of str1: 43
 // Length of str1: 43
 // Length of str1: 43
+// Ru
+// st
+// Ru\nst
+// Ru\nst

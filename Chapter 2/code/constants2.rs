@@ -13,8 +13,12 @@ fn main() {
 	// formatting:
 	println!("MAX_HEALTH is {:x} in hexadecimal", MAX_HEALTH);
 	println!("MAX_HEALTH is {:b} in binary", MAX_HEALTH);
+	println!( "Two written in binary is {0:b}", 2);
 
 	println!("pi is {:e} in floating point notation", PI);
+
+	let str = format!("You have {points} % health", points=70);
+	println!("{}", str); // str now contains the value "You have 70 % health"
 }
 // The Game you are playing is called Monster Attack.
 // You start with 100 health points.
@@ -22,4 +26,6 @@ fn main() {
 // You have 70 % health
 // MAX_HEALTH is 64 in hexadecimal
 // MAX_HEALTH is 1100100 in binary
+// Two written in binary is 10
 // pi is 3.14e0 in floating point notation
+// You have 70 % health

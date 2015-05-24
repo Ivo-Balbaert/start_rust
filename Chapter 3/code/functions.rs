@@ -1,5 +1,5 @@
 fn main() {
-	let hero1 = "Pac Man";
+	let hero1 = "Pac Man";  // is of type &str
 	let hero2 = "Riddick";
 	greet(hero2);
 	greet_both(hero1, hero2);

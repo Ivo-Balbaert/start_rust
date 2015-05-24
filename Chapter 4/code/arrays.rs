@@ -80,7 +80,7 @@ fn main() {
 	let magician = "Merlin";
 	let mut chars: Vec<char> = magician.chars().collect();
 	chars.sort();
-	for c in chars.iter() {
+	for c in chars {
 	    print!("{} ", c);
 	}
 	let v: Vec<&str> = "The wizard of Oz".split(' ').collect();
@@ -88,6 +88,11 @@ fn main() {
 
 	let v: Vec<&str> = "abc1def2ghi".split(|c: char| c.is_numeric()).collect();
 	assert_eq!(v, vec!["abc", "def", "ghi"]);
+	println!("");
+
+	// converting from a &str to a &[u8]:
+	let arr = magician.as_bytes();
+	println!("{:?}", arr );
 }
 // ["Cherfer", "Fynock", "Shirack", "Zuxu"]
 // []
@@ -115,3 +120,4 @@ fn main() {
 //
 // Earth
 // M e i l n r
+// [77, 101, 114, 108, 105, 110]

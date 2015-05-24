@@ -16,7 +16,7 @@ fn main() {
 	// solution: use an iterator:
 	let greeting = "Hello, 世界!";
 	println!("Bytes:");
-	for c in greeting.bytes() {
+	for c in greeting.bytes() { // same as as_bytes()
     	print!("{} - ", c);
 	}
 	println!("");

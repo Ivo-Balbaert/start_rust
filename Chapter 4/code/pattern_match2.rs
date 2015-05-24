@@ -1,3 +1,8 @@
+struct Point {
+    x: i32,
+    y: i32,
+}
+
 fn main() {
 	// exhaustive match with _:
     let magician = "Gandalf";
@@ -20,6 +25,14 @@ fn main() {
         // Handle the rest of cases
         _ => println!("No magic at all!"),
     }
+    // destructuring a tuple:
+
+
+    // destructuring a struct:
+    let origin = Point { x: 0, y: 0 };
+    match origin {
+        Point { x: x, y: y } => println!("This is the point: ({},{})", x, y),
+    }
 
     // destructuring values and using guards:
     let loki = ("Loki", true, 800u32); 
@@ -32,7 +45,10 @@ fn main() {
         (_, _, pow)  if pow <= 1000    => println!("This is a powerless god"),
         _ => println!("This is something else")
     }
+
+
 }
 // A good magician!
 // 42 is contained in this range
+// This is the point: (0,0)
 // This is a demigod called Loki
