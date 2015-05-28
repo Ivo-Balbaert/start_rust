@@ -21,8 +21,12 @@ fn main() {
 
 	// struct:
 	let mut pl1 = Player{ nname: "Dzenan", health: 73, level: 2 };
-	println!("Player {} is at level {}", pl1.nname, pl1.level);
+	println!("Player 1 {} is at level {}", pl1.nname, pl1.level);
 	pl1.level = 3;
+
+	// update syntax:
+	let pl2 = Player{ nname: "Ivo", ..pl1 };
+	println!("Player 2 {} is at level {}", pl2.nname, pl2.level);
 	
 	// destructuring a struct:
 	let Player{ health: ht, nname: nn, .. } = pl1;
@@ -34,6 +38,7 @@ fn main() {
 }
 // Health 73 - Level 2
 // weight is 250 kilograms
-// Player Dzenan is at level 2
-// John == John
+// Player 1 Dzenan is at level 2
+// Player 2 Ivo is at level 3
 // Player Dzenan has health 73
+// John == John

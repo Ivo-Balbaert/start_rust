@@ -7,7 +7,7 @@ impl Alien {
 	fn new(mut h: u32, d: u32) -> Alien {
 		// constraints:
 		if h > 100 { h = 100; }
-		Alien {health: h, damage: d}
+		Alien { health: h, damage: d }
 	}
 
 	fn warn() -> &'static str {

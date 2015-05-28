@@ -16,9 +16,11 @@ fn main() {
 // convert a string slice into a String
 	let mut str3 = magician1.to_string();
 	println!("{}", str3);	// Merlin
+
 // get a string slice from a String
 	let sl1 = &str3;
 	println!("{}", sl1);	// Merlin
+
 // turning a String into a slice with &*
 	let strm = "Sauron".to_string();
     println!("{}", &*strm);
@@ -40,6 +42,16 @@ fn main() {
 	println!("{}", str1); // Ɵ Level 1 is finished - 
 	str1.push_str("Rise up to Level 2");
 	println!("{}", str1); // Ɵ Level 1 is finished - Rise up to Level 2
+
+// concatenating strings:
+    let st1 = "United ".to_string(); // st1 is of type String
+    let st2 = "States";
+    let country = st1 + st2;
+    println!("The country is {}", country);
+    let st3 = "United ".to_string();
+    let st4 = "States".to_string();
+    let country = st3 + &st4;
+    println!("The country is {}", country);
 
 // iterate over String:
 // characters:
@@ -79,6 +91,8 @@ fn how_long(s: &str) -> usize {	s.len() }
 // Ɵ
 // Ɵ Level 1 is finished - 
 // Ɵ Level 1 is finished - Rise up to Level 2
+// The country is United States
+// The country is United States
 // M - e - r - l - i - n - Ɵ / Level / 1 / is / finished / - / Rise / up / to / Level / 2 / 
 // Ɵ Floor 1 is finished - Rise up to Floor 2
 // Length of Merlin: 6
