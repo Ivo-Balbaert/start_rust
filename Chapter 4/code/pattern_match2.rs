@@ -25,8 +25,9 @@ fn main() {
         // Handle the rest of cases
         _ => println!("No magic at all!"),
     }
-    // destructuring a tuple:
 
+    // destructuring a tuple:
+    // see match_tuple.rs
 
     // destructuring a struct:
     let origin = Point { x: 0, y: 0 };
@@ -46,9 +47,15 @@ fn main() {
         _ => println!("This is something else")
     }
 
+    // matching on a pointer:
+    let x = &5;
+    match x {
+        &val => println!("Got a pointer value: {}", val),
+    }
 
 }
 // A good magician!
 // 42 is contained in this range
 // This is the point: (0,0)
 // This is a demigod called Loki
+// Got a pointer value: 5

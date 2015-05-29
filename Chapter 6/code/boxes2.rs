@@ -20,6 +20,11 @@ fn main() {
 	use_alien(a2);
 	// use_alien2(&*a2);
 	// println!("{}", a2.n_tentacles); // error: use of moved value: `a2.n_tentacles`
+
+	// automatic dereferencing:
+	let ua = Box::new([1, 2, 3]);
+    println!("{}", ua[0]); // 1
+
 }
 
 fn use_alien(a: Box<Alien>) {
@@ -38,3 +43,4 @@ struct Recurs {
 // 67
 // 4
 // An alien from planet Mars is freed
+// 1
