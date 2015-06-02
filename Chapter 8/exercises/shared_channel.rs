@@ -1,7 +1,7 @@
 use std::thread;
 use std::sync::mpsc;
 
-static NTHREADS: usize = 7;
+static NTHREADS: usize = 8;
 
 fn main() {
     let (tx, rx) = mpsc::channel();
@@ -23,10 +23,11 @@ fn main() {
 }
 // -- The order is different each time the program is run: --
 // thread 0 done
+// thread 4 done
 // thread 1 done
+// thread 5 done
+// thread 7 done
 // thread 2 done
 // thread 3 done
-// thread 5 done
-// thread 4 done
 // thread 6 done
-// [1, 0, 2, 3, 5, 4, 6]
+// [6, 1, 0, 4, 5, 7, 2, 3]

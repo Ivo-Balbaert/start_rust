@@ -1,6 +1,5 @@
 #[repr(C)]
-#[derive(Copy, Clone)]
-#[derive(Debug)]
+#[derive(Copy, Clone, Debug)]
 struct Complex {
     re: f32,
     im: f32,

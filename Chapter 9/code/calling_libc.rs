@@ -1,5 +1,4 @@
-// error: use of unstable library feature 'libc'
-// help: add #![feature(libc)] to the crate attributes to enable
+// beta 4: error: unstable feature
 #![feature(libc)]
 
 extern crate libc;

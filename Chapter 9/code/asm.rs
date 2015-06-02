@@ -1,3 +1,5 @@
+// error: use of unstable library feature 'asm'
+// help: add #![feature(asm)] to the crate attributes to enable
 #![feature(asm)]
 
 fn subtract(a: i32, b: i32) -> i32 {

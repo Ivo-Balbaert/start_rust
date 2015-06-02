@@ -14,7 +14,7 @@ fn main() {
                     Ok(mut health) => *health *= i,
                     Err(str) => println!("{}", str)
             }
-        }).join().unwrap();
+        }).join();
     };
     health = *data.lock().unwrap();
     println!("health after: {:?}", health);
