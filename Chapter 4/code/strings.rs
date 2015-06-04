@@ -59,6 +59,15 @@ fn main() {
         print!("{} - ", c);
     } // M - e - r - l - i - n -
 
+    for c in magician1.bytes() {
+        print!("{} - ", c);
+    } // 77 - 101 - 114 - 108 - 105 - 110
+
+    // taking a character via an index does not work:
+    // error: the trait `core::ops::Index<_>` is not implemented for the type `str` [E0277]
+    // println!("{}", magician1[1]);
+    println!("{:?}", magician1.chars().nth(1)); // Some('e')
+
 // words:
 	for word in str1.split(" ") {	
         print!("{} / ", word);
@@ -93,10 +102,10 @@ fn how_long(s: &str) -> usize {	s.len() }
 // Ɵ Level 1 is finished - Rise up to Level 2
 // The country is United States
 // The country is United States
-// M - e - r - l - i - n - Ɵ / Level / 1 / is / finished / - / Rise / up / to / Level / 2 / 
+// M - e - r - l - i - n - 77 - 101 - 114 - 108 - 105 - 110 - Some('e')
+// Ɵ / Level / 1 / is / finished / - / Rise / up / to / Level / 2 / 
 // Ɵ Floor 1 is finished - Rise up to Floor 2
 // Length of Merlin: 6
-// Length of str1: 43
 // Length of str1: 43
 // Length of str1: 43
 // Ru
