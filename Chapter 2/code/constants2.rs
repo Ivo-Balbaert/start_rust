@@ -17,6 +17,13 @@ fn main() {
 
 	println!("pi is {:e} in floating point notation", PI);
 
+	let long_decimal : f64 = 0.56545874854551248754;
+	println!("{:.3}", long_decimal); // 0.565
+
+	let number = 42i32;
+	println!("{:08}", number); // 00000042
+	println!("{:8}", number); //       42
+
 	let str = format!("You have {points} % health", points=70);
 	println!("{}", str); // str now contains the value "You have 70 % health"
 }
@@ -28,4 +35,7 @@ fn main() {
 // MAX_HEALTH is 1100100 in binary
 // Two written in binary is 10
 // pi is 3.14e0 in floating point notation
+// 0.565
+// 00000042
+//      42
 // You have 70 % health
