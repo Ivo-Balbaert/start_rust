@@ -70,6 +70,9 @@ fn main() {
 	let slc = &magic_numbers[1..4]; // only the items 42, 47 and 45 
 	assert_eq!([42, 47, 45], slc);
 
+	let vec1 = slc.to_vec();
+	println!("{:?}", vec1 );
+
 	println!("");
 	// slice from a String:
 	let location = "Middle-Earth";
@@ -117,6 +120,7 @@ fn main() {
 // 2
 // 3
 // [2, 3, 4, 5]
+// [42, 47, 45]
 //
 // Earth
 // M e i l n r

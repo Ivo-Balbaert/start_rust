@@ -18,6 +18,12 @@ fn main() {
 	let pair_thor = (thor.0, thor.2);
 	let (god, strength) = increase_power2(pair_thor);
 	println!("This god {} has now {} strength", god, strength);
+
+	// swapping variables with a tuple:
+	let mut n = 0;
+	let mut m = 1;
+	let (n, m) = (m, n);
+	println!("n: {} m: {}", n, m);
 }
 
 fn increase_power(name: &str, power: u32) -> (&str, u32) {
@@ -41,3 +47,4 @@ fn increase_power2((name, power): (&str, u32)) -> (&str, u32) {
 // Thor has 3500 points of power
 // This god Thor has now 10500 strength
 // This god Thor has now 10500 strength
+// n: 1 m: 0

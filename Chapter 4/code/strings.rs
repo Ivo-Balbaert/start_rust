@@ -1,4 +1,5 @@
 use std::string;
+use std::str::FromStr;
 
 fn main() {
 // string slices of type &str
@@ -78,6 +79,10 @@ fn main() {
 	let str5 = str1.replace("Level", "Floor");
 	println!("{}", str5); // Ɵ Level 1 is finished - Rise up to Level 2
 
+// from_str:
+    println!("{:?}", f64::from_str("3.6"));
+    let number: f64 = f64::from_str("3.6").unwrap();
+   
 // string parameters:
 	println!("Length of Merlin: {}", how_long(magician1));
 	println!("Length of str1: {}", how_long(&str1));
@@ -105,6 +110,7 @@ fn how_long(s: &str) -> usize {	s.len() }
 // M - e - r - l - i - n - 77 - 101 - 114 - 108 - 105 - 110 - Some('e')
 // Ɵ / Level / 1 / is / finished / - / Rise / up / to / Level / 2 / 
 // Ɵ Floor 1 is finished - Rise up to Floor 2
+// Ok(3.6)
 // Length of Merlin: 6
 // Length of str1: 43
 // Length of str1: 43

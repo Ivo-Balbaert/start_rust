@@ -50,6 +50,7 @@ test_eq!(seven_times_six_is_not_forty_three, 7 * 6, 43);
 fn main() {
     welcome!();  // Welcome to the Game!
     mac1!(42); // arg is 42
+    mac1![42]; // arg is 42
     printall!("hello", 42, 3.14); // hello / 42 / 3.14 /
     fn1();
     // massert!(1 == 42);
@@ -61,6 +62,7 @@ fn main() {
 
 }
 // Welcome to the Game!
+// arg is 42
 // arg is 42
 // hello / 42 / 3.14 / Called the function "fn1"()
 // thread '<main>' panicked at 'Assertion failed!'

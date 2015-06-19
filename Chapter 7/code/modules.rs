@@ -1,6 +1,7 @@
 use game1::func2;
 use game1::func2 as gf2;
 // use game1::{func2, func3};
+// pub use game1::{func2, func3}; // visible in the super level
 // use game1::*;
 use game1::subgame1::subfunc1 as sf1;
 
@@ -34,6 +35,9 @@ mod game1 {
 fn main() {
 	// game1::func1(); // error: function `func1` is private
     game1::func2(); // works without the use import
+    self::game1::func2();
+    ::game1::func2();
+    // super::game1::func2(); // unresolved name
 
 	// calling a nested module:
     game1::subgame1::subfunc1();
