@@ -6,7 +6,13 @@ fn main() {
 		// a mutable version:
 	let mut aliens = ["Cherfer", "Fynock", "Shirack", "Zuxu"];
 	let zuxus = ["Zuxu"; 3]; // ["Zuxu", "Zuxu", "Zuxu"];
-		// empty array:
+	
+	// gotcha:
+	let mut buffer = [0u8, 255];
+	println!("{:?}", buffer );
+	let mut buffer = [0u8; 255];
+	
+	// empty array:
 	let mut empty: [i32; 0] = [];
 	println!("{:?}", empty); // []
 	println!("The first item is: {}", aliens[0]);
@@ -98,6 +104,7 @@ fn main() {
 	println!("{:?}", arr );
 }
 // ["Cherfer", "Fynock", "Shirack", "Zuxu"]
+// [0, 255]
 // []
 // The first item is: Cherfer
 // The third item is: Shirack
