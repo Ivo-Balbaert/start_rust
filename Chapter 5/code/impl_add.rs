@@ -26,3 +26,4 @@ fn main() {
     let at3 = at1.add(at2);
     println!("{:?}", at3);
 }
+// AType { value: 49 }
