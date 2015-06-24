@@ -25,7 +25,15 @@ fn main() {
     println!("The secret number is: {}", secret_number);
 
     let tuple = rand::random::<(f64, char)>();
-    println!("{:?}", tuple)
+    println!("{:?}", tuple);
+
+    // generate a random string:
+    let mut str = String::new();
+    for _ in (0..10) {
+        str.push(rand::random::<u8>() as char);
+    }
+    println!("{:?}", str);
+
 }
 // Give me 5 random numbers:
 // -1786096291 / -312872251 / 959357270 / 1391515785 / -1379700184 / 
@@ -33,3 +41,4 @@ fn main() {
 // 11 / 15 / 28 / 13 / 23 /
 // The secret number is: 16
 // (0.279622, '\u{583cf}')
+// "n\u{1b}\u{8a}\u{98}\"\u{d2}c\u{ee}\u{a8}I"
