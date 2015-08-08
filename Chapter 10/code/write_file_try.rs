@@ -12,8 +12,7 @@ struct Info {
 
 impl Info {
     fn as_bytes(&self) -> &[u8] {
-        let bytes = self.name.as_bytes();
-        bytes
+        self.name.as_bytes()
     }
 
     fn format(&self) -> String {

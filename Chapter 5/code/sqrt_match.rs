@@ -27,3 +27,4 @@ fn sqroot(r: f32) -> Result<f32, String> {
 // The square root of 42 is 6.480741
 // mres is 6.480741
 // for m == -5.0: Number cannot be negative!
+// res is 6.4807405

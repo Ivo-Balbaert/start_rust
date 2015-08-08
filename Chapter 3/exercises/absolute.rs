@@ -9,6 +9,7 @@ fn main() {
 // lines 6 and 7:
 // error: mismatched types: expected `u32`, found `i32` (expected u32, found i32)
 
+// corrected version:
 fn abs(x: i32) -> i32 {
    if x > 0 { 
    	x 
