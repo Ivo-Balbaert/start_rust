@@ -7,6 +7,9 @@ fn main() {
 	let power = increment_power(1);
 	println!("I am now at power level: {}", power);
 	assert_eq!(2, power);
+
+	println!("{}", double_input(4));
+	println!("{}", double_inputs(4));
 }
 
 fn greet(name: &str) {
@@ -25,3 +28,17 @@ fn increment_power(power: i32) -> i32 {
 	// return power + 1 // poor style
 	power + 1
 }
+
+fn double_input(mut i: u32) -> u32 { 
+	i = i * 2; 
+	i
+}
+
+fn double_inputs(i: u32) -> u32 { i * 2 }
+
+// Hi mighty Riddick, what brings you here?
+// Hi mighty Pac Man, what brings you here?
+// Hi mighty Riddick, what brings you here?
+// My power is going to increase:
+// I am now at power level: 2
+// 8

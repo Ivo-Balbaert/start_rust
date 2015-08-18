@@ -14,6 +14,6 @@ fn main() {
 
 fn div(x: i32, y: i32) -> f32 {
 	// if y == 0 { panic!("Division by 0 occurred, exiting"); }
-	assert!( y != 0, "Division by 0 occurred, exiting");
+	assert!(y != 0, "Division by 0 occurred, exiting");
 	(x / y) as f32
 }
